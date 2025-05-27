@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('include/header.html') %>
+    <p>Bienvenido a <%= title %></p>
+    <p>Este es el mensaje: <%= message %></p>
+    <h2>Productos</h2>
+    <ul>
+      <% products.forEach(product => { %>
+      <li>N°: <%= product.id %></li>
+      <li>Nombre:<%= product.name %></li>
+      <li>Precio: <%= product.price %></li>
+      <li>Descripción: <%= product.description %></li>
+      <% }) %>
+    </ul>
+    <%- include('include/footer.html') %>
+  </body>
+</html>

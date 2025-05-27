@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('include/header.html') %>
+    <h1>Grid con Rick and Morty</h1>
+    <div class="container">
+      <% personajes.forEach(personaje => { %>
+      <div class="character-card">
+        <img src="<%= personaje.image %>" alt="<%= personaje.name %>" />
+        <h3><%= personaje.name %></h3>
+        <p><%= personaje.status %></p>
+        <p><%= personaje.species %></p>
+        <p><%= personaje.type %></p>
+      </div>
+      <% }) %>
+    </div>
+    <%- include('include/footer.html') %>
+  </body>
+</html>
